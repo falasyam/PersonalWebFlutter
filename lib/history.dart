@@ -101,7 +101,7 @@ class History extends StatelessWidget{
           context: context,
           builder: (_) => AlertDialog(
             title: Text('About Web', textAlign: TextAlign.center,),
-            content: Text('Made with ❤\nBy FalaSyam')
+            content: Text('Made with ❤\nBy FalaSyam\n\nEmail : info@falasyam.com')
           ) 
         );
       }, child: Icon(Icons.info_outline),),

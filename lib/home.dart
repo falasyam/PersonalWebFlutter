@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:falasyam/history.dart';
 import 'package:falasyam/work.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatelessWidget{
 
@@ -57,7 +58,7 @@ class Home extends StatelessWidget{
           context: context,
           builder: (_) => AlertDialog(
             title: Text('About Web', textAlign: TextAlign.center,),
-            content: Text('Made with ❤\nBy FalaSyam')
+            content: Text('Made with ❤\nBy FalaSyam\n\nEmail : info@falasyam.com')
           ) 
         );
       }, child: Icon(Icons.info_outline),),
