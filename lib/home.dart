@@ -69,7 +69,7 @@ class Home extends StatelessWidget{
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               SizedBox(
-                height: 15,
+                height: 23,
               ),
               Text('Fala Syam', style: TextStyle(fontFamily: 'SourceCodePro', fontWeight: FontWeight.w700), ),
               SizedBox(
@@ -79,8 +79,40 @@ class Home extends StatelessWidget{
               SizedBox(
                 height: 20,
               ),
+              Column(
+                children: <Widget>[
+                  Padding(padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            child: Text('About Me', textAlign: TextAlign.start, style: TextStyle( fontWeight: FontWeight.bold),),
+                          ),
+                          ListTile(
+                            title: Text('Name'),
+                            subtitle: Text('Fala Syam Fitrakhul Akbar'),
+                          ),
+                          ListTile(
+                            title: Text('Birth'),
+                            subtitle: Text('6 January 2001'),
+                          ),
+                          ListTile(
+                            title: Text('City'),
+                            subtitle: Text('Jepara'),
+                          ),
+                          ListTile(
+                            title: Text('Country'),
+                            subtitle: Text('Indonesia'),
+                          ),
+                        ],
+                      )
+                    ),
+                  )
+                ],
+              ),
             ],
-          )
+          ),
         ),
       ),
     );

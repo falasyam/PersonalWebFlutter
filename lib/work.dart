@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:falasyam/history.dart';
 import 'package:falasyam/home.dart';
 
@@ -6,7 +8,8 @@ class Work extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    
+
+
     return new Scaffold(
       bottomNavigationBar: BottomAppBar(
         color: Colors.transparent,
@@ -63,28 +66,77 @@ class Work extends StatelessWidget{
       }, child: Icon(Icons.info_outline),),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-          width: double.maxFinite,
-          child: Card(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                ListTile(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+              child: Card(
+                child: ListTile(
                   leading: Icon(Icons.chat),
-                  title: Text('iChat'),
-                  subtitle: Text('Discontinued'),
+                  title: Text('iChat (Discontinued)', style: TextStyle(fontWeight: FontWeight.bold)),
+                  subtitle: Text('Messaging App use Firebase.'),
                 ),
-                ListTile(
-                  leading: Icon(Icons.note),
-                  title: Text('Notes App'),
-                  subtitle: Text('You Can See Source Code in My Github'),
-                )
-              ],
+              ),
             ),
-          ),
-        ), 
-      ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
+              child: Card(
+                elevation: 2,
+                child: InkWell(
+                  onTap: (){ launch('https://drive.google.com/drive/folders/1_iq4h6ojccgdoCzbJgMlojdF0PuwdPgp');},
+                    child: ListTile(
+                      leading: Icon(Icons.note_add),
+                      title: Text('Potato Kernel (Discontinued)', style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: Text('Kernel For Redmi 5A'),
+                    ),
+                )
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
+              child: Card(
+                elevation: 2,
+                child: InkWell(
+                  onTap: (){ launch('https://github.com/falasyam/Notes');},
+                    child: ListTile(
+                      leading: Icon(Icons.note_add),
+                      title: Text('Notes', style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: Text('Notes App Android'),
+                    ),
+                )
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
+              child: Card(
+                elevation: 2,
+                child: InkWell(
+                  onTap: (){ launch('https://github.com/falasyam/FlutterNotes');},
+                    child: ListTile(
+                      leading: Icon(Icons.note_add),
+                      title: Text('Flutter Notes', style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: Text('Made with Flutter'),
+                    ),
+                )
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
+              child: Card(
+                elevation: 2,
+                child: InkWell(
+                  onTap: (){ launch('https://github.com/falasyam/PersonalWebFlutter');},
+                    child: ListTile(
+                      leading: Icon(Icons.note_add),
+                      title: Text('Personal Web Flutter', style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: Text('Made with Flutter'),
+                    ),
+                )
+              ),
+            ),
+          ],
+        ),
+      )
     );
   }
 }
