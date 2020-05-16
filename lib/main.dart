@@ -1,3 +1,4 @@
+import 'package:falasyam/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:falasyam/home.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home(),
+      home: SplashScreenn(),
     );
   }
 }

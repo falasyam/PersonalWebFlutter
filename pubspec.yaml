@@ -15,6 +15,7 @@ dependencies:
   timeline_list: ^0.0.5
   timeline: ^0.0.1
   url_launcher: ^5.4.5
+  splashscreen: ^1.2.0
 
 dev_dependencies:
   flutter_test:

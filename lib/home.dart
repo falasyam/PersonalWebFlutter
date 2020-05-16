@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:falasyam/history.dart';
 import 'package:falasyam/work.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatelessWidget{
 
@@ -72,7 +71,7 @@ class Home extends StatelessWidget{
               SizedBox(
                 height: 23,
               ),
-              Text('Fala Syam', style: TextStyle(fontFamily: 'SourceCodePro', fontWeight: FontWeight.w700), ),
+              Text('Hi, I\'m Fala Syam', style: TextStyle(fontFamily: 'SourceCodePro', fontWeight: FontWeight.w700), ),
               SizedBox(
                 height: 30,
               ),
